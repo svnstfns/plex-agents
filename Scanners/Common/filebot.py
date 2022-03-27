@@ -34,8 +34,8 @@ def getxattr_plain_file(store, file, name):
 
 def xattr_metadata(file): 
   value = getxattr(file, 'net.filebot.metadata')
-  return json.loads(value) if value else None
-
+#  return json.loads(value) if value else None
+   return json.loads(value)
 
 def xattr_filename(file):
   return getxattr(file, 'net.filebot.filename')
